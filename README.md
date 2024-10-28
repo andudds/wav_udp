@@ -15,7 +15,7 @@ Este proyecto reproduce audio en loop y envía mensajes UDP en intervalos espec�
    git clone https://github.com/tu_usuario/udp_audio_project.git
 
 
-2. En el archivo `config.txt` puedes modificar los valores básicos de configuración como:
+2. En el archivo `configScript.txt` ubicado en directorio /boot de la sd de la raspberry puedes modificar los valores básicos de configuración como:
 
 - UDP_IP: IP de destino.
 - UDP_PORT: Puerto UDP de destino.
