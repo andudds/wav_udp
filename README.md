@@ -21,7 +21,7 @@ git clone https://github.com/tu_usuario/udp_audio_project.git
 
 ### Paso 2: Configurar el Archivo `config.txt`
 
-En el archivo `config.txt`, puedes modificar los valores básicos de configuración:
+En el archivo `config.txt`, en la carpeta raiz del proyecto, puedes modificar los valores básicos de configuración:
 
 - **UDP_IP**: IP de destino.
 - **UDP_PORT**: Puerto UDP de destino.
