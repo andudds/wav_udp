@@ -1,0 +1,7 @@
+# Configuración del programa
+
+UDP_IP=192.168.0.123
+UDP_PORT=12000
+AUDIO_FILE=media/ziggy_one_minute.wav
+EVENT_TIMES=1,5,13,59
+AUDIO_DURATION=60

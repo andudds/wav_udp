@@ -1,0 +1,13 @@
+[Unit]
+Description=Servicio de audio UDP con Python
+After=network.target
+
+[Service]
+ExecStart=/bin/python3 ~/scripts/wav_UDP/wav_UDP_txt.py
+Restart=always
+RestartSec=5
+User=pi  # Cambia esto a tu usuario si es diferente
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
