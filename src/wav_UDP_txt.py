@@ -3,7 +3,14 @@ import socket
 import time
 import os
 import subprocess
+from colorama import init, Fore
 
+# Inicializar colorama para habilitar colores en terminal
+init(autoreset=True)
+
+# Función para imprimir en colores
+def print_colored(text, color):
+    print(color + text)
 
 # Función para leer el archivo de configuración
 def read_config(filename):
@@ -139,20 +146,20 @@ config = read_config("/boot/configScript.txt")
 
 # Configuración de red
 static_ip = config.get("STATIC_IP", None)
-print(f"STATIC_IP desde archivo de configuración: {static_ip}")
+print_colored(f"STATIC_IP desde archivo de configuración: {static_ip}", Fore.GREEN)
 set_ip(static_ip)
 
 # Obtener valores de configuración
 udp_ip = config.get("UDP_IP", "127.0.0.1")
-print(f"IP de destino UDP: {udp_ip}")
+print_colored(f"IP de destino UDP: {udp_ip}", Fore.YELLOW)
 udp_port = int(config.get("UDP_PORT", 12000))
-print(f"Puerto de destino UDP: {udp_port}")
+print_colored(f"Puerto de destino UDP: {udp_port}", Fore.BLUE)
 audio_file = config.get("AUDIO_FILE", "default.wav")
-print(f"Archivo de audio: {audio_file}")
+print_colored(f"Archivo de audio: {audio_file}", Fore.CYAN)
 event_times = list(map(int, config.get("EVENT_TIMES", "10,20,30,60").split(",")))
-print(f"Tiempos de eventos: {event_times}")
-audio_duration = int(config.get("AUDIO_DURATION", 60))
-print(f"Duración del audio: {audio_duration} segundos")
+print_colored(f"Tiempos de eventos: {event_times}", Fore.MAGENTA)
+audio_duration = int(config.get("AUDIO_DURATION", 70))
+print_colored(f"Duración del audio: {audio_duration} segundos", Fore.WHITE)
 
 # Inicializar socket UDP y verificar conexión
 sock = initialize_socket(udp_ip, udp_port)
